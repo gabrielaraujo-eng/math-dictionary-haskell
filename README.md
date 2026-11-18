@@ -1,62 +1,31 @@
-# Dicionário de Matemática em Haskell 🧮
+# Dicionário de Matemática em Haskell
 
-Este projeto é um **Dicionário de Matemática** interativo e modular, implementado puramente em **Haskell**. Ele é uma aplicação de **terminal/linha de comando**, não um site: não possui HTML, CSS ou JavaScript. O código serve como uma biblioteca de referência para fórmulas e conceitos matemáticos fundamentais, organizados de forma clara e eficiente.
+Projeto educacional de terminal que organiza fórmulas de álgebra, geometria e estatística em módulos Haskell. Esta pasta é um projeto de programação, não uma aplicação web; a página do GitHub Pages funciona como uma apresentação do código.
 
-## 📂 Estrutura do Projeto
+## Estrutura
 
-O projeto está dividido em módulos específicos para facilitar a navegação e o uso:
+- `src/Algebra.hs`: Bhaskara, fatorial, Fibonacci e números primos.
+- `src/Geometry.hs`: áreas e volumes de figuras geométricas.
+- `src/Statistics.hs`: média, variância e desvio padrão.
+- `src/Main.hs`: ponto de entrada e exemplos de uso.
+- `math-dictionary.cabal`: configuração do pacote Cabal.
 
-- **`src/Geometry.hs`**: Fórmulas para áreas e volumes (Quadrado, Retângulo, Círculo, Triângulo, Esfera, Cilindro).
-- **`src/Algebra.hs`**: Funções algébricas (Bhaskara, Fatorial, Fibonacci, Verificação de Primos).
-- **`src/Statistics.hs`**: Cálculos estatísticos básicos (Média, Variância, Desvio Padrão).
-- **`src/Main.hs`**: Ponto de entrada que demonstra o uso das funções.
+## Requisitos e execução
 
-## 🚀 Como usar
+Instale o [GHC](https://www.haskell.org/ghc/) e o [Cabal](https://www.haskell.org/cabal/), então execute:
 
-### Pré-requisitos
-Você precisará ter o [GHC](https://www.haskell.org/ghc/) e o [Cabal](https://www.haskell.org/cabal/) instalados em sua máquina.
-
-### Executando o projeto
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/gabrielaraujo-eng/math-dictionary-haskell.git
-   ```
-2. Acesse o diretório:
-   ```bash
-   cd math-dictionary-haskell
-   ```
-3. Compile e execute:
-   ```bash
-   cabal run math-dictionary
-   ```
-
-## 📖 Exemplo de Fórmulas Incluídas
-
-### Álgebra: Bhaskara
-Resolve equações do tipo $ax^2 + bx + c = 0$.
-```haskell
-bhaskara :: Double -> Double -> Double -> Maybe (Double, Double)
+```bash
+git clone https://github.com/gabrielaraujo-eng/math-dictionary-haskell.git
+cd math-dictionary-haskell
+cabal run math-dictionary
 ```
 
-### Geometria: Área do Círculo
-Calcula a área de um círculo dado o raio.
-```haskell
-circleArea :: Double -> Double
-```
+## GitHub Pages
 
-### Estatística: Desvio Padrão
-Calcula o desvio padrão de uma lista de números.
-```haskell
-stdDev :: [Double] -> Double
-```
+O workflow em `.github/workflows/pages.yml` publica a página de apresentação. Para ativar a publicação pela primeira vez, abra **Settings → Pages** no repositório e selecione **GitHub Actions** como fonte.
 
-## ✨ Créditos
-Desenvolvido por **Gabriel** (Nagato09-dev).
-Este projeto foi criado para demonstrar a elegância da programação funcional aplicada à matemática.
+URL esperada: <https://gabrielaraujo-eng.github.io/math-dictionary-haskell/>
 
+## Créditos
 
-## Publicação
-
-Este repositório é publicado automaticamente no GitHub Pages:
-
-https://gabrielaraujo-eng.github.io/math-dictionary-haskell/
+Desenvolvido por Gabriel Lúcio de Araújo como estudo de programação funcional aplicada à matemática.
